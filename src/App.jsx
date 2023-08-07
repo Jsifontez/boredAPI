@@ -12,7 +12,11 @@ function App() {
       const response = await fetch(API_URL)
       const data = await response.json()
       setIsFetch(false)
-      setAtivities(old_activities => [...old_activities, data])
+      if (!data.hasOwnProperty('error')) {
+        setAtivities(old_activities => [...old_activities, data])
+      } else {
+        console.log('¡Lo sentimos! no pudimos encontrar una actividad con esa cantidad de participantes. Prueba de nuevo')
+      }
     }
 
     if (isFetch) {
