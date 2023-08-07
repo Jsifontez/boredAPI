@@ -3,8 +3,8 @@ import './App.css'
 import { TrashIcon } from '@heroicons/react/24/solid'
 
 function App() {
-  const [people, setPeople] = useState()
-  const API_URL = `http://www.boredapi.com/api/activity?participants=${people||1}`
+  const [people, setPeople] = useState(1)
+  const API_URL = `http://www.boredapi.com/api/activity?participants=${people}`
   const [activities, setActivities] = useState([])
   const [isFetch, setIsFetch] = useState(true)
 
