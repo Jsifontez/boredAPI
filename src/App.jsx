@@ -23,6 +23,7 @@ function App() {
     <>
       <main>
         <h1>Bored API Lista de quehaceres</h1>
+        <button onClick={() => setIsFetch(true)}>Añadir</button>
         {activities && activities.map(activity => {
           return <p key={activity.key}>{activity.activity}</p>
         })}
