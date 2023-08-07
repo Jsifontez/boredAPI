@@ -3,8 +3,8 @@ import './App.css'
 import { TrashIcon } from '@heroicons/react/24/solid'
 
 function App() {
-  const [people, setPeople] = useState(1)
-  const API_URL = `http://www.boredapi.com/api/activity?participants=${people}`
+  const [people, setPeople] = useState()
+  const API_URL = `http://www.boredapi.com/api/activity?participants=${people||1}`
   const [activities, setActivities] = useState([])
   const [isFetch, setIsFetch] = useState(true)
 
@@ -34,6 +34,7 @@ function App() {
     <>
       <main>
         <h1>Lista de quehaceres</h1>
+
         <section className='form-section'>
           <input
             className='number-input'
@@ -44,6 +45,7 @@ function App() {
           />
           <button onClick={() => setIsFetch(true)}>Añadir</button>
         </section>
+
         <ul className='list'>
           {activities && activities.map(activity => (
             <li className='list-item' key={activity.key}>

@@ -3,6 +3,10 @@
   width: fit-content;
 }
 
+.form-section button {
+  cursor: pointer;
+}
+
 /* Chrome, Safari, Edge, Opera */
 .number-input::-webkit-outer-spin-button,
 .number-input::-webkit-inner-spin-button {
@@ -24,6 +28,10 @@
   display: flex;
   align-items: center;
   height: 32px;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px;
 }
 
 .icon {
