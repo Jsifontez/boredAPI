@@ -1,3 +1,8 @@
+.form-section {
+  margin: 0 auto;
+  width: fit-content;
+}
+
 /* Chrome, Safari, Edge, Opera */
 .number-input::-webkit-outer-spin-button,
 .number-input::-webkit-inner-spin-button {
@@ -12,6 +17,7 @@
 
 .list {
   list-style: none;
+  padding: 0;
 }
 
 .list-item {

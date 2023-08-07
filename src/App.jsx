@@ -33,24 +33,28 @@ function App() {
   return (
     <>
       <main>
-        <h1>Bored API Lista de quehaceres</h1>
-        <input
-          className='number-input'
-          type='number'
-          placeholder='N° de personas'
-          value={people}
-          onChange={(e) => setPeople(e.target.value)}
-        />
-        <button onClick={() => setIsFetch(true)}>Añadir</button>
+        <h1>Lista de quehaceres</h1>
+        <section className='form-section'>
+          <input
+            className='number-input'
+            type='number'
+            placeholder='N° de personas'
+            value={people}
+            onChange={(e) => setPeople(e.target.value)}
+          />
+          <button onClick={() => setIsFetch(true)}>Añadir</button>
+        </section>
         <ul className='list'>
           {activities && activities.map(activity => (
             <li className='list-item' key={activity.key}>
-              <input id={activity.key} type='checkbox'/>
-              <label
-                htmlFor={activity.key}
-              >
-                {activity.activity}
-              </label>
+              <div>
+                <input id={activity.key} type='checkbox'/>
+                <label
+                  htmlFor={activity.key}
+                >
+                  {activity.activity}
+                </label>
+              </div>
               <span>
                 <TrashIcon
                   className='icon'
