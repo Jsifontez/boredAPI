@@ -35,6 +35,7 @@ function App() {
       <main>
         <h1>Bored API Lista de quehaceres</h1>
         <input
+          className='number-input'
           type='number'
           placeholder='N° de personas'
           value={people}
